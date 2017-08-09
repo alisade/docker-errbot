@@ -23,6 +23,7 @@ RUN groupadd -r $ERR_USER \
 # Install packages and perform cleanup
 RUN apt-get update \
   && apt-get -y install --no-install-recommends \
+         ssh \
          git \
          qalc \
          locales \

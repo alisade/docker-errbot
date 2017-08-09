@@ -99,19 +99,19 @@ If you pass arguments to Errbot you have to set the `-c /srv/config.py` argument
 ## Alternative config file
 
 ```bash
-docker run -it -v /tmp/errbot:/srv rroemhild/errbot -c /srv/production.py
+docker run -it -v /tmp/errbot:/srv rroemhild/errbot /app/venv/bin/run.sh -c /srv/production.py
 ```
 
 ## Err Help
 
 ```bash
-$ docker run rroemhild/errbot -h
+$ docker run rroemhild/errbot /app/venv/bin/run.sh -h
 ```
 
 ## Run with text debug backend
 
 ```bash
-docker run -it -v /tmp/errbot:/srv rroemhild/errbot -c /srv/config.py -T
+docker run -it -v /tmp/errbot:/srv rroemhild/errbot /app/venv/bin/run.sh -c /srv/config.py -T
 ```
 
 # Exposed Ports

@@ -5,12 +5,19 @@ FROM alpine:3.6
 MAINTAINER Ali S Ardestani <ali.sade@gmail.com>
 
 ENV ERR_USER err
+ENV PATH /app/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# Set default locale for the environment
+ENV LC_ALL C.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
 
 # Add err user and group
 RUN addgroup -S $ERR_USER && adduser -S -g $ERR_USER $ERR_USER -h /srv
 
 # Install packages and perform cleanup
 RUN apk add --update \
+    bash \
     libxslt-dev \
     libxml2-dev \
     openssl-dev \

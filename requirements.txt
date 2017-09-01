@@ -1,4 +1,3 @@
-errbot
 sleekxmpp
 pyasn1-modules
 irc
@@ -23,3 +22,6 @@ IPython
 filemagic
 raven
 six>=1.9
+validators
+python-jenkins
+errbot

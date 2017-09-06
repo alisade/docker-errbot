@@ -17,6 +17,7 @@ RUN addgroup -S $ERR_USER && adduser -S -g $ERR_USER $ERR_USER -h /srv
 
 # Install packages and perform cleanup
 RUN apk add --update \
+    git \
     bash \
     libxslt-dev \
     libxml2-dev \
